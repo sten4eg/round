@@ -33,7 +33,7 @@ func TestF(t *testing.T) {
 		fmt.Printf("Round: %#v\n", v[i])
 
 		for j := 0; j < len(p); j++ {
-			r := Round(v[i], int(p[j]), 0)
+			r := Round(v[i], int(p[j]), RoundHalfUp)
 			fmt.Printf("with precision %#v -> %#v \n", p[j], r)
 		}
 	}
