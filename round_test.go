@@ -42,20 +42,20 @@ func TestMathRound(t *testing.T) {
 	if !b {
 		t.Fatal()
 	}
-	b = epsilonEqual(float64(minInt)-1.0, round(float64(minInt)-0.6, 0, 0))
+	b = epsilonEqual(float64(minInt)-1.0, Round(float64(minInt)-0.6, 0, 0))
 	if !b {
 		t.Fatal(b)
 	}
 
-	b = epsilonEqual(float64(minInt), round(float64(minInt)-0.4, 0, 0))
+	b = epsilonEqual(float64(minInt), Round(float64(minInt)-0.4, 0, 0))
 	if !b {
 		t.Fatal(b)
 	}
-	b = epsilonEqual(float64(minInt), round(float64(minInt)+0.4, 0, 0))
+	b = epsilonEqual(float64(minInt), Round(float64(minInt)+0.4, 0, 0))
 	if !b {
 		t.Fatal(b)
 	}
-	b = epsilonEqual(float64(minInt)+1, round(float64(minInt)+0.6, 0, 0))
+	b = epsilonEqual(float64(minInt)+1, Round(float64(minInt)+0.6, 0, 0))
 	if !b {
 		t.Fatal(b)
 	}
@@ -76,19 +76,19 @@ func TestMathRound(t *testing.T) {
 	if !b {
 		t.Fatal(b)
 	}
-	b = epsilonEqual(float64(maxInt)-1, round(float64(maxInt)-0.6, 0, 0))
+	b = epsilonEqual(float64(maxInt)-1, Round(float64(maxInt)-0.6, 0, 0))
 	if !b {
 		t.Fatal(b)
 	}
-	b = epsilonEqual(float64(maxInt), round(float64(maxInt)-0.4, 0, 0))
+	b = epsilonEqual(float64(maxInt), Round(float64(maxInt)-0.4, 0, 0))
 	if !b {
 		t.Fatal(b)
 	}
-	b = epsilonEqual(float64(maxInt), round(float64(maxInt)+0.4, 0, 0))
+	b = epsilonEqual(float64(maxInt), Round(float64(maxInt)+0.4, 0, 0))
 	if !b {
 		t.Fatal(b)
 	}
-	b = epsilonEqual(float64(maxInt)+1, round(float64(maxInt)+0.6, 0, 0))
+	b = epsilonEqual(float64(maxInt)+1, Round(float64(maxInt)+0.6, 0, 0))
 	if !b {
 		t.Fatal(b)
 	}

@@ -13,7 +13,7 @@ const (
 	RoundHalfOdd
 )
 
-func round(value float64, Precision int, mode int) float64 {
+func Round(value float64, Precision int, mode int) float64 {
 	var f1, f2, tmpValue float64
 	var err error
 
@@ -34,7 +34,7 @@ func round(value float64, Precision int, mode int) float64 {
 
 	/* If the decimal precision guaranteed by FP arithmetic is higher than
 	   the requested Precision BUT is small enough to make sure a non-zero value
-	   is returned, pre-round the result to the precision */
+	   is returned, pre-Round the result to the precision */
 	var usePrecision int64
 	if precisionPlaces > Precision && precisionPlaces-15 < Precision {
 		if precisionPlaces < minInt+1 {
@@ -78,7 +78,7 @@ func round(value float64, Precision int, mode int) float64 {
 		}
 	}
 
-	/* round the temp value */
+	/* Round the temp value */
 	tmpValue = roundHelper(tmpValue, mode)
 
 	if math.Abs(float64(Precision)) < 23 {

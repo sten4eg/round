@@ -30,10 +30,10 @@ func TestF(t *testing.T) {
 	}
 
 	for i := 0; i < len(v); i++ {
-		fmt.Printf("round: %#v\n", v[i])
+		fmt.Printf("Round: %#v\n", v[i])
 
 		for j := 0; j < len(p); j++ {
-			r := round(v[i], int(p[j]), 0)
+			r := Round(v[i], int(p[j]), 0)
 			fmt.Printf("with precision %#v -> %#v \n", p[j], r)
 		}
 	}
